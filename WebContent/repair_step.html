@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>重庆文理学院宿舍管理系统>>申请报修</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/jquery.js"></script>
+<script src="js/scrollable.js"></script>
+<script type="text/javascript" src="js/dms-plugin.js"></script>
+<script type="text/javascript" src="js/dms-restep.js"></script>
+<script type="text/javascript" src="js/dms-userinfo.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="bg">
+			<!-------------top begin--------------->
+			<div class="top">
+				<img src="images/logo.png" />
+				<div class="menu">
+					<ul>
+<!-- 						<li><a class="hide" href="index.html">首页</a></li> -->
+						<li><a class="hide" href="room_mark.html">卫生评分</a></li>
+						<li><a class="hide" href="repair_step.html">寝室报修</a>
+							<ul>
+								<li><a href="repair_step.html">我要报修</a></li>
+								<li><a href="repair_record.html">报修记录</a></li>
+							</ul></li>
+						<li><a class="hide" href="noticelf.html">物品寻失</a>
+							<ul>
+								<li><a href="noticelf.html">我要发布</a></li>
+								<li><a href="mynotices.html">寻失记录</a></li>
+								<li><a href="notices.html">寻失大厅</a></li>
+							</ul></li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+				<div class="info" id="loginUserInfo"><p>当前登录：<a></a><span id="userLogout">注销</span></p></div>
+			</div>
+			<!-------------top end----------------->
+			<!-------------content begin--------------->
+			<div class="content">
+				<div class="main">
+					<div class="step">
+						<div id="wizard">
+							<ul id="status">
+								<li class="active"><strong>1.</strong>填写申请</li>
+								<li><strong>2.</strong>确认提交申请</li>
+								<li><strong>3.</strong>申请结束</li>
+							</ul>
+							<div class="items">
+								<div class="page" id="f_step">
+									<form id="f_stepform" class="form-horizontal" role="form" onsubmit="return false;">
+										<div class="form-group">
+											<label class="col-sm-2 control-label">报修名称</label>
+											<div class="col-sm-10">
+												<input class="form-control" name="reName" placeholder="填写报修名称..." required autofocus />
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label">报修寝室</label>
+											<div class="col-sm-2">
+												<select class="form-control" name="dormID">
+												</select>
+											</div>
+											<div class="col-sm-2">
+												<input class="form-control" name="roomNo" placeholder="报修寝室..." required />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="inputPassword3" class="col-sm-2 control-label">详细内容</label>
+											<div class="col-sm-10">
+												<textarea class="form-control" rows="5" name="reContent" placeholder="报修详细内容..." required></textarea>
+											</div>
+										</div>
+										<div class="btn_nav">
+											<input id="nextBtn" type="button" class="next btn btn-primary" value="下一步" />
+										</div>
+									</form>
+								</div>
+								<div class="page" id="s_step">
+									<form class="form-horizontal" role="form" onsubmit="return false;">
+										<div class="form-group">
+											<label class="col-sm-2 control-label">报修名称</label>
+											<div class="col-sm-10">
+												<input class="form-control" name="reName" readonly="readonly"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label">报修寝室</label>
+											<div class="col-sm-3">
+												<input class="form-control" name="roomNo" readonly="readonly"/>
+											</div>
+
+										</div>
+										<div class="form-group">
+											<label for="inputPassword3" class="col-sm-2 control-label">详细内容</label>
+											<div class="col-sm-10">
+												<textarea class="form-control" rows="5" name="reContent" readonly="readonly"></textarea>
+											</div>
+										</div>
+									</form>
+									<div class="btn_nav">
+										<input id="prevBtn" type="button" class="prev btn btn-primary" value="返回上一步" /> 
+										<input id="lastBtn" type="button" class="next btn btn-primary" value="确认并提交申请" />
+									</div>
+								</div>
+								<div class="page" id="l_step">
+									<div class="result">
+										<h2></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<script>
+							$("#wizard").scrollable({
+								onSeek : function(event, i) { //切换tab样式 
+									$("#status li").removeClass("active").eq(i).addClass("active");
+								}
+							})
+						</script>
+					</div>
+				</div>
+			</div>
+			<!-------------content end----------------->
+			<!-------------footer begin---------------->
+			<div class="footer">
+				<p>版权所有(C) 2014年 SemF&AOAO All Rights Reserved.</p>
+			</div>
+			<!-------------footer end---------------->
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>重庆文理学院宿舍管理系统>>报修记录</title>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/dms-plugin.js"></script>
+<script type="text/javascript" src="js/dms-record.js"></script>
+<script type="text/javascript" src="js/dms-userinfo.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="bg">
+			<!-------------top begin--------------->
+			<div class="top">
+				<img src="images/logo.png" />
+				<div class="menu">
+					<ul>
+<!-- 						<li><a class="hide" href="index.html">首页</a></li> -->
+						<li><a class="hide" href="room_mark.html">卫生评分</a></li>
+						<li><a class="hide" href="repair_step.html">寝室报修</a>
+							<ul>
+								<li><a href="repair_step.html">我要报修</a></li>
+								<li><a href="repair_record.html">报修记录</a></li>
+							</ul></li>
+						<li><a class="hide" href="noticelf.html">物品寻失</a>
+							<ul>
+								<li><a href="noticelf.html">我要发布</a></li>
+								<li><a href="mynotices.html">寻失记录</a></li>
+								<li><a href="notices.html">寻失大厅</a></li>
+							</ul></li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+				<div class="info" id="loginUserInfo"><p>当前登录：<a></a><span id="userLogout">注销</span></p></div>
+			</div>
+			<!-------------top end----------------->
+			<!-------------content begin--------------->
+			<div class="content">
+				<div class="main">
+					<!-------------grade begin--------------->
+					<div class="grade">
+						<div class="search_box">
+							<input type="text" class="s" id="searchText" /> <input
+								type="image" src="images/btn_search_box.png" width="27"
+								height="24" class="go" id="search" />
+						</div>
+						<table width="1000">
+							<caption>我的报修记录</caption>
+							<thead>
+								<tr>
+									<th>申请报修名称</th>
+									<th>申请报修时间</th>
+									<th>申请报修寝室</th>
+									<th>报修学生姓名</th>
+									<th>审核回复</th>
+									<th>审核管理员</th>
+									<th>报修状态</th>
+								</tr>
+							</thead>
+							<tbody id="tab"></tbody>
+						</table>
+						<ul class="pagination paging" id="pagination">
+						</ul>
+					</div>
+					<!-------------grade end--------------->
+				</div>
+			</div>
+			<!-------------content end----------------->
+			<!-------------footer begin---------------->
+			<div class="footer">
+				<p>版权所有(C) 2014年 SemF&AOAO All Rights Reserved.</p>
+			</div>
+			<!-------------footer end---------------->
+		</div>
+	</div>
+</body>
+</html>

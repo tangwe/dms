@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>后台管理系统>>主页</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="./css/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="./css/demo.css">
+<link rel="stylesheet" type="text/css" href="./css/css.css">
+<script type="text/javascript" src="./js/user/public.js"></script>
+<script type="text/javascript" src="./js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="./js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="./js/datagrid-groupview.js"></script>
+<script type="text/javascript" src="./js/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="./js/user/menu.js"></script>
+<script type="text/javascript" src="./js/user/user.js"></script>
+</head>
+
+<body id="main" class="easyui-layout">
+	<div id="top" data-options="region:'north',title:'',split:true"	style="height: 95px; text-align: right;">
+		<p style="margin-top: 50px; margin-right: 10px;">
+			<a id="updatePwd" class="easyui-linkbutton" data-options="plain:true">【修改密码】</a>
+<!-- 			<a id="updateInfo" class="easyui-linkbutton" data-options="plain:true">【个人信息】</a>  -->
+			<a href="doLogout.html" class="easyui-linkbutton" data-options="plain:true">【注销】</a>
+		</p>
+	</div>
+
+	<div id="left" data-options="region:'west',title:'主菜单',split:true"
+		style="width: 180px;">
+		<div id="menu" class="easyui-accordion"	data-options="animate:false,fit:true,border:false,selected:true" style="">
+			<div title="学生信息管理" data-options="" style="overflow: auto; padding: 10px;">
+				<ul style="list-style-type: none; list-style: none">
+					<li id="stuList" class="menu_li" href="./admin_stu.html">学生数据维护</li>
+				</ul>
+			</div>
+			<div title="宿舍管理员信息管理" data-options="" style="overflow: auto; padding: 10px;">
+				<ul style="list-style-type: none; list-style: none">
+					<li id="manList" class="menu_li" href="./admin_man.html">管理员数据维护</li>
+				</ul>
+			</div>
+			<div title="宿舍寝室管理" data-options="" style="overflow: auto; padding: 10px;">
+				<ul style="list-style-type: none; list-style: none">
+					<li id="dormList" class="menu_li" href="./admin_dorm.html">宿舍数据维护</li>
+					<li id="roomList" class="menu_li" href="./admin_room.html">寝室数据维护</li>
+				</ul>
+			</div>
+			<div title="寝室评分管理" data-options="" style="overflow: auto; padding: 10px;">
+				<ul style="list-style-type: none; list-style: none">
+					<li id="mark" class="menu_li" href="./admin_mark.html">寝室评分</li>
+					<li id="markList" class="menu_li" href="./admin_mark_view.html">寝室评分数据维护</li>
+				</ul>
+			</div>
+			<div title="寝室报修管理" style="overflow: auto; padding: 10px;">
+				<ul style="list-style-type: none; list-style: none">
+					<li id="repairCheck" class="menu_li" href="./admin_repair_uncheck.html">寝室报修待审核</li>
+					<li id="repairCheck" class="menu_li" href="./admin_repair_checked.html">寝室报修已审核</li>
+					<li id="repairList" class="menu_li" href="./admin_repair.html">寝室报修数据维护</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="right" data-options="region:'center'" style="padding: 5px; background: #eee;">
+		<div id="tt" class="easyui-tabs" style="width: 500px; height: 250px;" data-options="fit:true"></div>
+	</div>
+	<div id="down" data-options="region:'south',title:'',split:true" style="height: 35px">
+		<p style="text-align: center;">版权所有(C) 2014年 SemF All Rights Reserved.</p>
+	</div>
+	<!-- main end -->
+	<div id="updatePwdDialog" style="display: none">
+		<form style="text-align: center;" method="post">
+			<table style="margin: 20px auto;">
+				<tr>
+					<td style="font-size: 12px">旧密码:</td>
+					<td><input class="easyui-validatebox" type="password" name="oldPwd" data-options="required:true"></input></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td style="font-size: 12px">新密码:</td>
+					<td><input class="easyui-validatebox" type="password" name="newPwd" data-options="required:true"></input></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

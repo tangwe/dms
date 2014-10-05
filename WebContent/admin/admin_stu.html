@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统>>学生信息管理</title>
+</head>
+<body>
+	<script type="text/javascript" src="./js/user/stu.js"></script>
+	<div class="easyui-layout" fit="true" border="false">
+		<div region="north" border="false" title='检索' style="height: 60px; overflow: hidden;">
+			<form id="stuSearchBox">
+				<table>
+					<th style="font-family: 宋体; font-size: 12px">学号：</th>
+					<td><input name="kw1" type="text" /></td>
+					<th style="font-family: 宋体; font-size: 12px">姓名：</th>
+					<td><input name="kw2" type="text" /></td>
+					<td><a id="searchBtn" class="easyui-linkbutton" data-options="iconCls:'icon-search'"></a></td>
+				</table>
+			</form>
+		</div>
+		<div region="center" border="false">
+			<table id="stuDataList"></table>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统>>宿舍信息管理</title>
+</head>
+<body>
+	<script type="text/javascript" src="./js/user/dorm.js"></script>
+	<div class="easyui-layout" fit="true" border="false">
+		<div region="center" border="false">
+			<table id="dormDataList"></table>
+		</div>
+	</div>
+	<div id="dormDialog" style="display: none">
+		<form style="text-align: center;" method="post">
+			<table style="margin: 20px auto;">
+				<tr>
+					<td style="font-size: 12px">宿舍名称:</td>
+					<td><input class="easyui-validatebox" type="text" name="dName"
+						data-options="required:true"></input></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td style="font-size: 12px">宿舍备注:</td>
+					<td><input class="easyui-validatebox" type="text" name="dDesc"></input></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td style="font-size: 12px">宿舍状态:</td>
+					<td><select class="easyui-combobox"
+						data-options="panelHeight:'auto'" name="state">
+							<option value="1">可用</option>
+							<option value="0">不可用</option>
+					</select></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

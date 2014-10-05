@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统>>寝室报修信息管理</title>
+</head>
+<body>
+	<script type="text/javascript" src="./js/user/repair.js"></script>
+	<div class="easyui-layout" fit="true" border="false">
+		<div region="north" border="false" title='检索' style="height: 60px; overflow: hidden;">
+			<form id="repairSearchBox">
+				<table>
+					<th style="font-family: 宋体; font-size: 12px">寝室名称：</th>
+					<td><input name="kw1" type="text" /></td>
+					<td><a id="searchBtn" class="easyui-linkbutton"	data-options="iconCls:'icon-search'"></a></td>
+				</table>
+			</form>
+		</div>
+		<div region="center" border="false">
+			<table id="repairDataList"></table>
+		</div>
+	</div>
+</body>
+</html>

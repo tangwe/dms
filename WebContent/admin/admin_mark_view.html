@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统>>寝室评分管理</title>
+</head>
+<body>
+	<script type="text/javascript" src="./js/user/mark-view.js"></script>
+	<div class="easyui-layout" fit="true" border="false">
+		<div region="north" border="false" title='检索' style="height: 60px; overflow: hidden;">
+			<form id="markSearchBox">
+				<table>
+					<th style="font-size: 12px">年:</th>
+					<td><input name="year" type="text" /></td>
+					<th style="font-size: 12px">月:</th>
+					<td><input name="month" type="text" /></td>
+					<th style="font-family: 宋体; font-size: 12px">寝室名称：</th>
+					<td><input name="kw1" type="text" /></td>
+					<th style="font-family: 宋体; font-size: 12px">宿舍名称：</th>
+					<td><input name="kw2" type="text" /></td>
+					<td><a id="searchBtn" class="easyui-linkbutton" data-options="iconCls:'icon-search'"></a></td>
+				</table>
+			</form>
+		</div>
+		<div region="center" border="false">
+			<table id="markDataList"></table>
+		</div>
+	</div>
+</body>
+</html>

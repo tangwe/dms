@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统>>寝室待审核管理</title>
+</head>
+<body>
+	<script type="text/javascript" src="./js/user/repair-uncheck.js"></script>
+	<div class="easyui-layout" fit="true" border="false">
+		<div region="north" border="false" title='检索' style="height: 60px; overflow: hidden;">
+			<form id="repairUCSearchBox">
+				<table>
+					<th style="font-family: 宋体; font-size: 12px">寝室名称：</th>
+					<td><input name="kw1" type="text" /></td>
+					<td><a id="searchUCBtn" class="easyui-linkbutton" data-options="iconCls:'icon-search'"></a></td>
+				</table>
+			</form>
+		</div>
+		<div region="center" border="false">
+			<table id="repairUCDataList"></table>
+		</div>
+	</div>
+
+	<div id="repairUCDialog" style="display: none">
+		<form style="text-align: center;" method="post">
+			<table style="margin: 20px auto;">
+				<tr>
+					<td style="font-size: 12px">报修名称:</td>
+					<td><input class="easyui-validatebox" type="text" name="reName" data-options="required:true"></input></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td style="font-size: 12px">报修内容:</td>
+					<td><textarea rows="5" cols="17" name="reContent"></textarea></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td style="font-size: 12px">审核内容:</td>
+					<td><textarea rows="5" cols="17" name="mReply"></textarea></td>
+				</tr>
+				<tr></tr>
+				<tr>
+					<td style="font-size: 12px">审核状态:</td>
+					<td><select class="easyui-combobox"
+						data-options="panelHeight:'auto'" name="state">
+							<option value="1">待审核</option>
+							<option value="2">通过</option>
+							<option value="3">不通过</option>
+					</select></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

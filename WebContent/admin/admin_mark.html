@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>后台管理系统>>管理员评分</title>
+</head>
+<body>
+	<script type="text/javascript" src="./js/user/mark.js"></script>
+	<div id="markpanel" class="easyui-panel" title="" style="width: 1172px; height: 481px;">
+		<p style="font-size: 18px; text-align: center;">XXXX年X月寝室评分</p>
+		<div id="markSet">
+			<form class="easyui-form" method="post"	data-options="novalidate:true" style="text-align: center;">
+				<table cellpadding="5" style="margin: 10px auto">
+					<tr>
+						<td>宿舍:</td>
+						<td><input name="dormID" style="height: 30px;width: 180px"></input></td>
+					</tr>
+					<tr>
+						<td>寝室:</td>
+						<td><input class="easyui-textbox" type="text" name="roomNo" data-options="required:true" style="height: 30px;width: 180px"></input></td>
+					</tr>
+					<tr>
+						<td>周次:</td>
+						<td> 
+							<select class="easyui-combobox" name="weekTs" style="height: 30px;width:180px;">
+								<option value="1">周次一</option>
+								<option value="2">周次二</option>
+								<option value="3">周次三</option>
+								<option value="4">周次四</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>地面评分:</td>
+						<td><input class="easyui-textbox" type="text" name="sv1" data-options="required:true" style="height: 30px;width: 180px"></input></td>
+						<td><input type="text" name="desc1" style="height: 30px;width: 150px"></input></td>
+					</tr>
+					<tr>
+						<td>桌面评分:</td>
+						<td><input class="easyui-textbox" type="text" name="sv2" data-options="required:true" style="height: 30px;width: 180px"></input></td>
+						<td><input type="text" name="desc2" style="height: 30px;width: 150px"></input></td>
+					</tr>
+					<tr>
+						<td>阳台评分:</td>
+						<td><input class="easyui-textbox" type="text" name="sv3" data-options="required:true" style="height: 30px;width: 180px"></input></td>
+						<td><input type="text" name="desc3" style="height: 30px;width: 150px"></input></td>
+					</tr>
+					<tr>
+						<td>厕所评分:</td>
+						<td><input class="easyui-textbox" type="text" name="sv4" data-options="required:true" style="height: 30px;width: 180px"></input></td>
+						<td><input type="text" name="desc4" style="height: 30px;width: 150px"></input></td>
+					</tr>
+				</table>
+			</form>
+			<div style="text-align: center; padding: 5px"><a class="easyui-linkbutton" id ="subBtn">提交评分</a></div>
+		</div>
+	</div>
+</body>
+</html>
